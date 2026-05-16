@@ -12,17 +12,60 @@
 		A54363692F32178200797776 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = A54363682F32178200797776 /* PostgREST */; };
 		A543636B2F32178200797776 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = A543636A2F32178200797776 /* Realtime */; };
 		A543636D2F32178200797776 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = A543636C2F32178200797776 /* Storage */; };
+		A55C075F2F9AB64000438CC0 /* SentencepieceTokenizer in Frameworks */ = {isa = PBXBuildFile; productRef = A55C075E2F9AB64000438CC0 /* SentencepieceTokenizer */; };
 		A5F434DF2F32327C0086E2B3 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A5F434DE2F32327C0086E2B3 /* Supabase */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B5BD30062F3204C60031A2A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5BD301C2F3204C60031A2A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5BD30232F3204C60031A2A3;
+			remoteInfo = AdaptLingo;
+		};
+		C5BD30062F3204C60031A2A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5BD301C2F3204C60031A2A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5BD30232F3204C60031A2A3;
+			remoteInfo = AdaptLingo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A5BD30242F3204C60031A2A3 /* AdaptLingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdaptLingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5BD30012F3204C60031A2A3 /* AdaptLingoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdaptLingoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5BD30012F3204C60031A2A3 /* AdaptLingoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdaptLingoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A51342132F84062100F86F04 /* Exceptions for "AdaptLingo" folder in "AdaptLingo" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A5BD30232F3204C60031A2A3 /* AdaptLingo */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A5BD30262F3204C60031A2A3 /* AdaptLingo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A51342132F84062100F86F04 /* Exceptions for "AdaptLingo" folder in "AdaptLingo" target */,
+			);
 			path = AdaptLingo;
+			sourceTree = "<group>";
+		};
+		B5BD30022F3204C60031A2A3 /* AdaptLingoTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AdaptLingoTests;
+			sourceTree = "<group>";
+		};
+		C5BD30022F3204C60031A2A3 /* AdaptLingoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AdaptLingoUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -38,17 +81,42 @@
 				A54363652F32178200797776 /* Auth in Frameworks */,
 				A543636D2F32178200797776 /* Storage in Frameworks */,
 				A543636B2F32178200797776 /* Realtime in Frameworks */,
+				A55C075F2F9AB64000438CC0 /* SentencepieceTokenizer in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BD30042F3204C60031A2A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5BD30042F3204C60031A2A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A51AC4172FB5DC94003713DE /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B5BD30022F3204C60031A2A3 /* AdaptLingoTests */,
+				C5BD30022F3204C60031A2A3 /* AdaptLingoUITests */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		A5BD301B2F3204C60031A2A3 = {
 			isa = PBXGroup;
 			children = (
 				A5BD30262F3204C60031A2A3 /* AdaptLingo */,
 				A5BD30252F3204C60031A2A3 /* Products */,
+				A51AC4172FB5DC94003713DE /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				A5BD30242F3204C60031A2A3 /* AdaptLingo.app */,
+				B5BD30012F3204C60031A2A3 /* AdaptLingoTests.xctest */,
+				C5BD30012F3204C60031A2A3 /* AdaptLingoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,10 +156,53 @@
 				A543636A2F32178200797776 /* Realtime */,
 				A543636C2F32178200797776 /* Storage */,
 				A5F434DE2F32327C0086E2B3 /* Supabase */,
+				A55C075E2F9AB64000438CC0 /* SentencepieceTokenizer */,
 			);
 			productName = AdaptLingo;
 			productReference = A5BD30242F3204C60031A2A3 /* AdaptLingo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B5BD30082F3204C60031A2A3 /* AdaptLingoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5BD300B2F3204C60031A2A3 /* Build configuration list for PBXNativeTarget "AdaptLingoTests" */;
+			buildPhases = (
+				B5BD30032F3204C60031A2A3 /* Sources */,
+				B5BD30042F3204C60031A2A3 /* Frameworks */,
+				B5BD30052F3204C60031A2A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5BD30072F3204C60031A2A3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B5BD30022F3204C60031A2A3 /* AdaptLingoTests */,
+			);
+			name = AdaptLingoTests;
+			productName = AdaptLingoTests;
+			productReference = B5BD30012F3204C60031A2A3 /* AdaptLingoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C5BD30082F3204C60031A2A3 /* AdaptLingoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5BD300B2F3204C60031A2A3 /* Build configuration list for PBXNativeTarget "AdaptLingoUITests" */;
+			buildPhases = (
+				C5BD30032F3204C60031A2A3 /* Sources */,
+				C5BD30042F3204C60031A2A3 /* Frameworks */,
+				C5BD30052F3204C60031A2A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5BD30072F3204C60031A2A3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C5BD30022F3204C60031A2A3 /* AdaptLingoUITests */,
+			);
+			name = AdaptLingoUITests;
+			productName = AdaptLingoUITests;
+			productReference = C5BD30012F3204C60031A2A3 /* AdaptLingoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -117,6 +230,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A54363632F32178200797776 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				A55C075D2F9AB64000438CC0 /* XCRemoteSwiftPackageReference "swift-sentencepiece" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A5BD30252F3204C60031A2A3 /* Products */;
@@ -124,12 +238,28 @@
 			projectRoot = "";
 			targets = (
 				A5BD30232F3204C60031A2A3 /* AdaptLingo */,
+				B5BD30082F3204C60031A2A3 /* AdaptLingoTests */,
+				C5BD30082F3204C60031A2A3 /* AdaptLingoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A5BD30222F3204C60031A2A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BD30052F3204C60031A2A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5BD30052F3204C60031A2A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,7 +276,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5BD30032F3204C60031A2A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5BD30032F3204C60031A2A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5BD30072F3204C60031A2A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5BD30232F3204C60031A2A3 /* AdaptLingo */;
+			targetProxy = B5BD30062F3204C60031A2A3 /* PBXContainerItemProxy */;
+		};
+		C5BD30072F3204C60031A2A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5BD30232F3204C60031A2A3 /* AdaptLingo */;
+			targetProxy = C5BD30062F3204C60031A2A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A5BD302D2F3204C70031A2A3 /* Debug */ = {
@@ -280,11 +437,13 @@
 				DEVELOPMENT_TEAM = 95JWV3FJJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdaptLingo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,11 +471,13 @@
 				DEVELOPMENT_TEAM = 95JWV3FJJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdaptLingo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +492,76 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5BD30092F3204C60031A2A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95JWV3FJJ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adaptlingo.AdaptLingoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdaptLingo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AdaptLingo";
+			};
+			name = Debug;
+		};
+		B5BD300A2F3204C60031A2A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95JWV3FJJ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adaptlingo.AdaptLingoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdaptLingo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AdaptLingo";
+			};
+			name = Release;
+		};
+		C5BD30092F3204C60031A2A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95JWV3FJJ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adaptlingo.AdaptLingoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AdaptLingo;
+			};
+			name = Debug;
+		};
+		C5BD300A2F3204C60031A2A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95JWV3FJJ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adaptlingo.AdaptLingoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AdaptLingo;
 			};
 			name = Release;
 		};
@@ -355,6 +586,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B5BD300B2F3204C60031A2A3 /* Build configuration list for PBXNativeTarget "AdaptLingoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5BD30092F3204C60031A2A3 /* Debug */,
+				B5BD300A2F3204C60031A2A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5BD300B2F3204C60031A2A3 /* Build configuration list for PBXNativeTarget "AdaptLingoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5BD30092F3204C60031A2A3 /* Debug */,
+				C5BD300A2F3204C60031A2A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -364,6 +613,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.5.1;
+			};
+		};
+		A55C075D2F9AB64000438CC0 /* XCRemoteSwiftPackageReference "swift-sentencepiece" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jkrukowski/swift-sentencepiece.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.6;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -393,6 +650,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A54363632F32178200797776 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Storage;
+		};
+		A55C075E2F9AB64000438CC0 /* SentencepieceTokenizer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A55C075D2F9AB64000438CC0 /* XCRemoteSwiftPackageReference "swift-sentencepiece" */;
+			productName = SentencepieceTokenizer;
 		};
 		A5F434DE2F32327C0086E2B3 /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;

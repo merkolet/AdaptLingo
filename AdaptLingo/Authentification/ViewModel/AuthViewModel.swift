@@ -17,6 +17,8 @@ final class AuthViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     
+    @Published private(set) var loginSucceeded: Bool = false
+    
     var isFormValid: Bool {
         !email.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty &&
         !password.isEmpty &&
@@ -24,17 +26,18 @@ final class AuthViewModel: ObservableObject {
     }
     
     // MARK: - Actions
-    
     func login() {
         guard !isLoading, isFormValid else { return }
         
         Task {
             isLoading = true
             errorMessage = nil
+            loginSucceeded = false
             defer { isLoading = false }
             
             do {
                 try await supabase.auth.signIn(email: email, password: password)
+                loginSucceeded = true
             } catch {
                 if let authError = error as? AuthError {
                     errorMessage = authError.localizedDescription
@@ -45,7 +48,16 @@ final class AuthViewModel: ObservableObject {
         }
     }
     
-    func forgotPassword() {
-        // TODO: восстановление пароля через email (Supabase reset password)
+    func clearLoginSuccess() {
+        loginSucceeded = false
+    }
+
+    func needsPlacementTest() async -> Bool {
+        do {
+            let user = try await supabase.auth.user()
+            return !UserDefaults.standard.bool(forKey: "placement_done_\(user.id)")
+        } catch {
+            return true
+        }
     }
 }

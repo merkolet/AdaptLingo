@@ -1,0 +1,17 @@
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.xccheckout
+*.moved-aside
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Секреты (НЕ коммитить!)
+AdaptLingo/Services/Config.swift
+AdaptLingo/Authentification/Model/Supabase.swift
+
+# macOS
+.DS_Store

@@ -11,16 +11,18 @@ import Combine
 
 @MainActor
 final class SignUpViewModel: ObservableObject {
+    @Published var nickname: String = ""
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
 
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
-    /// Флаг успешной регистрации: View подписывается и при true вызывает onSignUpSuccess, затем clearSuccess().
+
     @Published private(set) var registrationSucceeded: Bool = false
 
     var isFormValid: Bool {
+        !nickname.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty &&
         !email.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty &&
         email.contains("@") &&
         password.count >= 8 &&
@@ -38,7 +40,13 @@ final class SignUpViewModel: ObservableObject {
             defer { isLoading = false }
 
             do {
-                _ = try await supabase.auth.signUp(email: email, password: password)
+                let response = try await supabase.auth.signUp(email: email, password: password)
+                let userId = response.user.id.uuidString
+                let trimmed = nickname.trimmingCharacters(in: .whitespacesAndNewlines)
+                try await supabase
+                    .from("user_profiles")
+                    .upsert(["id": userId, "display_name": trimmed])
+                    .execute()
                 registrationSucceeded = true
             } catch {
                 if let authError = error as? AuthError {
@@ -50,8 +58,7 @@ final class SignUpViewModel: ObservableObject {
         }
     }
 
-    /// Вызывается из View после реакции на registrationSucceeded, чтобы сбросить флаг.
-    func clearSuccess() {
+    func clearSignUpSuccess() {
         registrationSucceeded = false
     }
 }
