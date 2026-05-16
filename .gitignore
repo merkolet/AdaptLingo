@@ -9,9 +9,17 @@ DerivedData/
 .build/
 .swiftpm/
 
-# Секреты (НЕ коммитить!)
+# Секреты
 AdaptLingo/Services/Config.swift
 AdaptLingo/Authentification/Model/Supabase.swift
+
+# ML модели (слишком большие для GitHub)
+AdaptLingo/ML/
+
+# Python virtual environment
+.venv*/
+venv/
+__pycache__/
 
 # macOS
 .DS_Store
